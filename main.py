@@ -24,12 +24,13 @@ def count_clicks(bitlink, headers):
 
 
 def main():
-
+    load_dotenv()
+    bitly_generic_access_token = os.getenv('BITLY_GENERIC_ACCESS_TOKEN')
     parser = argparse.ArgumentParser(
         description="Скрипт позволяет генерировать короткие ссылки и и получать информацию о количестве кликов "
     )
     parser.add_argument('link', help='Ссылка на ресурс')
-    headers = {'Authorization': 'Bearer {}'.format(BITLY_GENERIC_ACCESS_TOKEN)}
+    headers = {'Authorization': 'Bearer {}'.format(bitly_generic_access_token)}
     link_parse = urlparse(parser.parse_args().link)
 
     try:
@@ -44,6 +45,4 @@ def main():
 
 
 if __name__ == "__main__":
-    load_dotenv()
-    BITLY_GENERIC_ACCESS_TOKEN = os.getenv('BITLY_GENERIC_ACCESS_TOKEN')
     main()

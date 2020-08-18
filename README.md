@@ -10,10 +10,10 @@ pip install -r requirements.txt
 ``` 
 
 #### Переменные окружения
-- TOKEN
+- BITLY_GENERIC_ACCESS_TOKEN
 .env example:
 ```
-TOKEN=1230f4335d4fbec167abfb3c3tyu6998879a6be4
+BITLY_GENERIC_ACCESS_TOKEN=1230f4335d4fbec167abfb3c3tyu6998879a6be4
 ```
 ##### Как получить
 
